@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,7 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
@@ -28,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 }
 
 .text-section h1 {
@@ -57,11 +59,66 @@ span {
   font-size: 1.5rem;
 }
 
-.image-section{
-  background-image: linear-gradient(rgba(162, 89, 255, 0.5), rgba(162, 89, 255, 0.5));
-  background-size: cover;
-  background-position: center;
+.image-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.image-overlay {
+  position: relative;
+  width: 100%;
   height: 100%;
 }
+
+.image-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(170, 92, 219, 0.5), rgba(28, 25, 56, 0.5));
+  z-index: 1;
+}
+
+.image-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 375px;
+  }
+
+  .text-section {
+    padding: 30px 20px;
+  }
+
+  .text-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-section {
+    min-height: 240px;
+  }
+
+  .image-overlay img {
+    content: url('images/image-header-mobile.jpg');
+  }
+}
+
 /* .attribution { font-size: 11px;}
 .attribution a { color: hsl(228, 45%, 44%); } */
