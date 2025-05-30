@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.text-section {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+span {
+  color: #a259ff;
+}
+
+.text-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  font-size: 1rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stats div strong {
+  font-size: 1.5rem;
+}
+
+.image-section{
+  background-image: linear-gradient(rgba(162, 89, 255, 0.5), rgba(162, 89, 255, 0.5));
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+/* .attribution { font-size: 11px;}
+.attribution a { color: hsl(228, 45%, 44%); } */
